@@ -9,7 +9,7 @@ editor: visual
 
 ## Pendahuluan
 
-Kesenjangan dalam pendidikan meruapakan masalah yang selalu ada dan menjadi salah sau perbincangan hangat dalam kebijakan pemerintah dan kebijakan pendidikan.
+Kesenjangan dalam pendidikan meruapakan masalah yang selalu ada dan menjadi salah sau perbincangan hangat dalam kebijakan pemerintah dan kebijakan pendidikan. Kesenjangan tersebut dapat berakibat pada berkurangnya kesempatan yang minim dan tidak bisa diatasi oleh pendekatan biasa. 
 
 Educational inequalities are one of the most persistent social problems in contemporary societies and have been widely researched in psychology, education, sociology, economics, and beyond @codiroli2019.
 
