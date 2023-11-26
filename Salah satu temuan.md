@@ -1,4 +1,4 @@
-## judul yang belum ditemukan
+## judul yang belum ditemuka
 
 Beberapa paper menyimpulkan bahwa  
-
+Tanya dengan.
