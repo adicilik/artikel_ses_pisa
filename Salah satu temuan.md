@@ -10,4 +10,4 @@ Tanya dengan.
 - kementerian seyogyanya menyediakan beberapa hal yang terkait dengan peningkatan sara dan prasarana, sehingga dapat dioptimalkan menjadi lebih baik. 
 
 - Rekomendasi yang bisa diberikan hanya kan memberikan beberapa komitmen yang menyeluruh dan tidak bisa hanya berguna untuk menggunakan beberapa penggunaan yang tidak bisa digunakan untuk 
-- 
+- Hal ini menjadikan beberapa studi menjadi tidak relevan lagi untuk dijadikan temuan yang menentukan dan tidak lagi menjadi sebuah hal yang tidak berarti lagi untuk sesuatu yang berguna dalam kajian-kajian yang melibatkan 
