@@ -10,4 +10,9 @@ Tanya dengan.
 - kementerian seyogyanya menyediakan beberapa hal yang terkait dengan peningkatan sara dan prasarana, sehingga dapat dioptimalkan menjadi lebih baik. 
 
 - Rekomendasi yang bisa diberikan hanya kan memberikan beberapa komitmen yang menyeluruh dan tidak bisa hanya berguna untuk menggunakan beberapa penggunaan yang tidak bisa digunakan untuk 
-- 
+
+
+## Aspek yang perlu diperhatikan
+
+- aspek manusia merupakan aspek penting dalam mengembangkan perangkat lunak, karena manusia menjadi pengguna utama sehingga perlu diperhatikan untuk mengembangkan aspek tersebut. Sehingga kita bisa memperbaiki perangkat lunak sesuai kebutuhan utama manusia.
+-   
