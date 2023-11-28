@@ -9,7 +9,10 @@ editor: visual
 
 ## Pendahuluan
 
-Kesenjangan dalam pendidikan meruapakan masalah yang selalu ada dan menjadi salah sau perbincangan hangat dalam kebijakan pemerintah dan kebijakan pendidikan. Kesenjangan tersebut dapat berakibat pada berkurangnya kesempatan yang minim dan tidak bisa diatasi oleh pendekatan biasa. 
+Kesenjangan dalam pendidikan meruapakan masalah yang selalu ada dan menjadi salah sau perbincangan hangat dalam kebijakan pemerintah dan kebijakan pendidikan. Kesenjangan tersebut dapat berakibat pada berkurangnya kesempatan yang minim dan tidak bisa diatasi oleh pendekatan biasa. Hal imni merupakan pendekatan yang dapat digunakan mengukur dampak kesenjangan dalam pendidikan. Kesenjangan inilah yang seharusnya diatasi oleh pemerintah dan tidak hanya dibiarkan begitu saja oleh sekolah sehingga kita tidak bisa menjalankan kegiatan rutin yang mengganggu banyak kejadian yang dapat mempengaruhi prestasi belajar.  
+
+Salah satu strategi yang ditawarkan untuk menguji kesenjangan adalah dengan pendekatan intersecetionality, sebuh pendekatan yang memamndang bahwa kesenjangan adalah sebuah fenomena intersectional. Dengan demikian untuk melihat kesenjangan maka diperlukan metode yang kompleks untuk memahami kesenjangan. 
+
 
 Educational inequalities are one of the most persistent social problems in contemporary societies and have been widely researched in psychology, education, sociology, economics, and beyond @codiroli2019.
 
