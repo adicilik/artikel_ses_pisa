@@ -31,11 +31,13 @@ library(tidyverse)
 library(haven)
 library(miceadds)
 library(fastDummies)
+library(here)
 
 #pisa_2018 <- read_sav("CY07_MSU_STU_QQQ.sav")
 #pisa_idn <- pisa_2018 |> filter (CNT == "IDN")
 #write_csv(pisa_idn, "pisa_idn.csv")
-pisa_sch <- read_sav("CY07_MSU_SCH_QQQ.sav")
+here::here()
+pisa_sch <- read_sav(here("inputs", "data", "CY07_MSU_SCH_QQQ.sav"))
 pisa_idn_sch <- pisa_sch |> select(CNT, CNTSCHID, SC001Q01TA) |> 
                 filter(CNT=="IDN") |> 
                 rename(sekolah_id = CNTSCHID,
@@ -45,7 +47,7 @@ pisa_idn_sch <- pisa_sch |> select(CNT, CNTSCHID, SC001Q01TA) |>
 ```{r}
 #| echo: false
 #| output: false
-pisa_idn <- read.csv("pisa_idn.csv")
+pisa_idn <- read.csv(here("inputs", "data", "pisa_idn.csv"))
 ```
 
 ```{r}
@@ -138,12 +140,15 @@ pisa_maihda <- left_join(pisa_idn, pisa_idn_strata, by="stu_id") |>
 #| output: false
 library(lme4)
 library(sjPlot)
+library(Matrix)
 m0 <- lmer(MATH ~ 1 + (1|strata), data = pisa_maihda)
-m05 <- lmer(READ ~ 1 + HISCED + HISEI + gender + (1|strata), data = pisa_maihda)
 m1 <- lmer(MATH  ~ 1 + rural_1 + rural_2 + rural_3 + rural_4 + HISCED_1 + HISCED_2 +HISCED_3 +HISCED_4 +HISCED_5 + HISEI_cat_1 + HISEI_cat_2 + HISEI_cat_3 +  HISEI_cat_4 + gender_1 + (1|strata), data = pisa_maihda)
 
 summary(m0)
 summary(m1)
+
+
+
 ```
 
 ```{r}
