@@ -5,18 +5,15 @@ bibliography: inequal.bib
 editor: visual
 ---
 
-
-
 ## Pendahuluan
 
-Educational inequalities are more prononuced in developing countries. This problem can have long term consequences on the future life of young generation.  
+Educational inequalities are more prononuced in developing countries. This problem can have long term consequences on the future life of young generation.
 
-> Intersectionality comes from the view that when we try understand inequalities, we need to understand 
+> Intersectionality comes from the view that when we try understand inequalities, we need to understand
 
-Kesenjangan dalam pendidikan meruapakan masalah yang selalu ada dan menjadi salah sau perbincangan hangat dalam kebijakan pemerintah dan kebijakan pendidikan. Kesenjangan tersebut dapat berakibat pada berkurangnya kesempatan yang minim dan tidak bisa diatasi oleh pendekatan biasa. Hal imni merupakan pendekatan yang dapat digunakan mengukur dampak kesenjangan dalam pendidikan. Kesenjangan inilah yang seharusnya diatasi oleh pemerintah dan tidak hanya dibiarkan begitu saja oleh sekolah sehingga kita tidak bisa menjalankan kegiatan rutin yang mengganggu banyak kejadian yang dapat mempengaruhi prestasi belajar.  
+Kesenjangan dalam pendidikan meruapakan masalah yang selalu ada dan menjadi salah sau perbincangan hangat dalam kebijakan pemerintah dan kebijakan pendidikan. Kesenjangan tersebut dapat berakibat pada berkurangnya kesempatan yang minim dan tidak bisa diatasi oleh pendekatan biasa. Hal imni merupakan pendekatan yang dapat digunakan mengukur dampak kesenjangan dalam pendidikan. Kesenjangan inilah yang seharusnya diatasi oleh pemerintah dan tidak hanya dibiarkan begitu saja oleh sekolah sehingga kita tidak bisa menjalankan kegiatan rutin yang mengganggu banyak kejadian yang dapat mempengaruhi prestasi belajar.
 
-Salah satu strategi yang ditawarkan untuk menguji kesenjangan adalah dengan pendekatan intersecetionality, sebuh pendekatan yang memamndang bahwa kesenjangan adalah sebuah fenomena intersectional. Dengan demikian untuk melihat kesenjangan maka diperlukan metode yang kompleks untuk memahami kesenjangan. 
-
+Salah satu strategi yang ditawarkan untuk menguji kesenjangan adalah dengan pendekatan intersecetionality, sebuh pendekatan yang memamndang bahwa kesenjangan adalah sebuah fenomena intersectional. Dengan demikian untuk melihat kesenjangan maka diperlukan metode yang kompleks untuk memahami kesenjangan.
 
 Educational inequalities are one of the most persistent social problems in contemporary societies and have been widely researched in psychology, education, sociology, economics, and beyond @codiroli2019.
 
@@ -75,6 +72,32 @@ pisa_idn <- pisa_idn  |> select(CNTSCHID, CNTSTUID, ST004D01T, HISCED, HISEI,
             
 
 ```
+
+```{r}
+library(kableExtra)
+library(psych)
+library(gtsummary)
+pisa_khusus <- pisa_idn |> select(HISCED, HISEI, MATH, READ, SCIE)
+ringkasan <- describe(pisa_khusus, skew = FALSE, ranges = FALSE,trim=.1,
+              type=3,check=FALSE,fast=NULL,quant=NULL,IQR=FALSE,omit=FALSE)
+tbl_summary(pisa_idn)
+kable(ringkasan)
+```
+
+```{r}
+library(gtsummary)
+library(gt)
+describe(pisa_khusus, skew = FALSE, ranges = FALSE,trim=.1,
+              type=3,check=FALSE,fast=NULL,quant=NULL,IQR=FALSE,omit=FALSE) |> gt()
+```
+
+```{r}
+library(vtable)
+#pisa_khusus <- pisa_idn |> select(HISCED, HISEI, MATH, READ, SCIE)
+st(pisa_khusus)
+```
+
+
 
 ```{r}
 #| echo: false
