@@ -1,29 +1,35 @@
 ---
-title: "MAIHDA Mathematics in Indonesia"
+title: "Does inequality affect Mathematics achievement among Indonesian students: A MAIHDA approach" 
 format: html
-bibliography: inequal.bib
 editor: visual
+bibliography: inequal.bib
 ---
 
-## Pendahuluan
 
-Educational inequalities are more prononuced in developing countries. This problem can have long term consequences on the future life of young generation.
+## Introduction
 
-> Intersectionality comes from the view that when we try understand inequalities, we need to understand
 
-Kesenjangan dalam pendidikan meruapakan masalah yang selalu ada dan menjadi salah sau perbincangan hangat dalam kebijakan pemerintah dan kebijakan pendidikan. Kesenjangan tersebut dapat berakibat pada berkurangnya kesempatan yang minim dan tidak bisa diatasi oleh pendekatan biasa. Hal imni merupakan pendekatan yang dapat digunakan mengukur dampak kesenjangan dalam pendidikan. Kesenjangan inilah yang seharusnya diatasi oleh pemerintah dan tidak hanya dibiarkan begitu saja oleh sekolah sehingga kita tidak bisa menjalankan kegiatan rutin yang mengganggu banyak kejadian yang dapat mempengaruhi prestasi belajar.
+Salah satu pertanyaan penting dalam dunia pendidikan Indonesia adalah seberapa besar kesenjangan dan ketimpangan dapat menjelaskan dan memprediksi prestasi belajar. Mengetahui sumber ketimpangan dapat menjadin rekomendasi yang penting untuk membuat rekomendasi kebijakan. Dalam kajian ketimpangan, ada beberapa pendekatan yang digunakan untuk mengukur ketimpangan. Salah satunya adalah pendekatan intersectionality. Pendekatan ini berasumsi bahwa ketimpangan bersumber pada situasi dimana individu berada dalam situasi intersectional dimana seorang yang memiliki karakteristik sosial ekonomi tertentu akan menjadi satu dalam intersection. @else2016intersectionality1
 
-Salah satu strategi yang ditawarkan untuk menguji kesenjangan adalah dengan pendekatan intersecetionality, sebuh pendekatan yang memamndang bahwa kesenjangan adalah sebuah fenomena intersectional. Dengan demikian untuk melihat kesenjangan maka diperlukan metode yang kompleks untuk memahami kesenjangan.
+## Intersectional approach
 
-Educational inequalities are one of the most persistent social problems in contemporary societies and have been widely researched in psychology, education, sociology, economics, and beyond @codiroli2019.
+Intersectionality merupakan kerangka analitik untuk memahami bagaimana keragaman identitas individu dalam hal sosial politik menghasilkan kombinasi yang unik dalam diskriminasi dan keistimewaan kesempatan. @cho2013toward.@bauer2021intersectionality
 
-Salah satu artikel terbaru menawarkan pendekatan terbaru dalam kesenjangan dalam pendidikan @keller2023.
 
-'Intersectionality' refers to the idea that social categories, principally those that involve inequality or power, such as gender, race or ethnicity, and social background,are almost always permeated by one another [@codiroli2019]
 
-Konsep ini awalnya diperkenalkan oleh @crenshaw2013.
+## Intersectional framework within multilevel model  
 
-Pada dasarnya kerangka intersectionality berpendapat bahwa faktor-faktor sosial yang mendukung ketimpangan merupakan hal yang meresap dan bersatu padu.
+Beberapa pendekatan yang digunakan dalam penelitian intersectionality antara lain @choo2010practicing @evans2020multilevel
+
+
+## Methods 
+
+### Data
+
+### Analytic Strategy
+
+## Results
+
 
 ```{r}
 #| echo: false
@@ -33,6 +39,7 @@ library(haven)
 library(miceadds)
 library(fastDummies)
 library(here)
+library(vtable)
 
 #pisa_2018 <- read_sav("CY07_MSU_STU_QQQ.sav")
 #pisa_idn <- pisa_2018 |> filter (CNT == "IDN")
@@ -75,13 +82,20 @@ pisa_idn <- pisa_idn  |> select(CNTSCHID, CNTSTUID, ST004D01T, HISCED, HISEI,
 
 
 
+
+### Descriptive results
+
+Berikut ini adalah hasil deskriptif masing-masing variabel. 
+
 ```{r}
-library(vtable)
+#| echo: false
 pisa_khusus <- pisa_idn |> select(HISCED, HISEI, MATH, READ, SCIE)
 st(pisa_khusus)
 ```
 
-Table
+
+Lebih lanjut lagi berikut adalah hasil deskriptif masing-masing strata yang dihasilkan.
+
 
 
 
@@ -155,7 +169,9 @@ pisa_maihda <- left_join(pisa_idn, pisa_idn_strata, by="stu_id") |>
 ```
 
 ```{r}
+#| echo: false
 library(gt)
+
 des_strata <- pisa_maihda |> group_by(strata) |> 
               summarise(n=n(),
                 mean_math = mean(MATH),
@@ -184,20 +200,27 @@ summary(m1)
 
 ```
 
+### Multilevel model 
+
+Berikut adalah hasil estimasi multilevel model. 
+
 ```{r}
+#| echo: false
 tab_model(m0, m1)
 ```
 
-## RQ 1
+### RQ 1
 
 ```{r}
 #round(strata.var.model1/(strata.var.model1 + residual.var.model1)*100, 2)
 rq1 <- round(726.50/(726.5+5644.55)*100,2)
 ```
 
-## RQ2
+### RQ2
 
 ```{r}
+#| echo: false
+#| warning: false
 #library(ggdist)
 #library(tidybayes)
 #predicted <- m0 %>%
@@ -229,7 +252,7 @@ pisa_maihda %>%
   xlab("")
 ```
 
-## RQ 3
+### RQ 3
 
 ```{r}
 #round(strata.var.model2/(strata.var.model2 + residual.var.model2)*100, 2)
@@ -242,8 +265,13 @@ pcv <- round(((726.50-564.82)/726.50)*100, 2)
 pcv
 ```
 
-## RQ 4
+### RQ 4
 
 ```{r}
 ranef(m1)
 ```
+
+
+
+
+
