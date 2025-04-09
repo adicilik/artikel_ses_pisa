@@ -5,31 +5,25 @@ editor: visual
 bibliography: inequal.bib
 ---
 
-
 ## Introduction
 
-
-Salah satu pertanyaan penting dalam dunia pendidikan Indonesia adalah seberapa besar kesenjangan dan ketimpangan dapat menjelaskan dan memprediksi prestasi belajar. Mengetahui sumber ketimpangan dapat menjadin rekomendasi yang penting untuk membuat rekomendasi kebijakan. Dalam kajian ketimpangan, ada beberapa pendekatan yang digunakan untuk mengukur ketimpangan. Salah satunya adalah pendekatan intersectionality. Pendekatan ini berasumsi bahwa ketimpangan bersumber pada situasi dimana individu berada dalam situasi intersectional dimana seorang yang memiliki karakteristik sosial ekonomi tertentu akan menjadi satu dalam intersection. @else2016intersectionality1
+Salah satu pertanyaan penting dalam dunia pendidikan Indonesia adalah seberapa besar kesenjangan dan ketimpangan dapat menjelaskan dan memprediksi prestasi belajar. Mengetahui sumber ketimpangan dapat menjadin rekomendasi yang penting untuk membuat rekomendasi kebijakan. Dalam kajian ketimpangan, ada beberapa pendekatan yang digunakan untuk mengukur ketimpangan. Salah satunya adalah pendekatan intersectionality. Pendekatan ini berasumsi bahwa ketimpangan bersumber pada situasi dimana individu berada dalam situasi intersectional dimana seorang yang memiliki karakteristik sosial ekonomi tertentu akan menjadi satu dalam intersection [@else2016intersectionality1]
 
 ## Intersectional approach
 
-Intersectionality merupakan kerangka analitik untuk memahami bagaimana keragaman identitas individu dalam hal sosial politik menghasilkan kombinasi yang unik dalam diskriminasi dan keistimewaan kesempatan. @cho2013toward.@bauer2021intersectionality
+Intersectionality merupakan kerangka analitik untuk memahami bagaimana keragaman identitas individu dalam hal sosial politik menghasilkan kombinasi yang unik dalam diskriminasi dan keistimewaan kesempatan. @cho2013toward.\@bauer2021intersectionality
 
-
-
-## Intersectional framework within multilevel model  
+## Intersectional framework within multilevel model
 
 Beberapa pendekatan yang digunakan dalam penelitian intersectionality antara lain @choo2010practicing @evans2020multilevel
 
-
-## Methods 
+## Methods
 
 ### Data
 
 ### Analytic Strategy
 
 ## Results
-
 
 ```{r}
 #| echo: false
@@ -80,12 +74,9 @@ pisa_idn <- pisa_idn  |> select(CNTSCHID, CNTSTUID, ST004D01T, HISCED, HISEI,
 
 ```
 
-
-
-
 ### Descriptive results
 
-Berikut ini adalah hasil deskriptif masing-masing variabel. 
+Berikut ini adalah hasil deskriptif masing-masing variabel.
 
 ```{r}
 #| echo: false
@@ -93,13 +84,7 @@ pisa_khusus <- pisa_idn |> select(HISCED, HISEI, MATH, READ, SCIE)
 st(pisa_khusus)
 ```
 
-
 Lebih lanjut lagi berikut adalah hasil deskriptif masing-masing strata yang dihasilkan.
-
-
-
-
-
 
 ```{r}
 #| echo: false
@@ -183,7 +168,6 @@ des_strata
 
 ```
 
-
 ```{r}
 #| echo: false
 #| output: false
@@ -200,9 +184,9 @@ summary(m1)
 
 ```
 
-### Multilevel model 
+### Multilevel model
 
-Berikut adalah hasil estimasi multilevel model. 
+Berikut adalah hasil estimasi multilevel model.
 
 ```{r}
 #| echo: false
@@ -270,8 +254,3 @@ pcv
 ```{r}
 ranef(m1)
 ```
-
-
-
-
-
